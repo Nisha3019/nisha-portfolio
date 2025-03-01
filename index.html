@@ -4,101 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nisha Patil - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-header {
-    background: url('background.jpg') center center/cover;
-    height: 100vh;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-}
-
-.overlay {
-    background: rgba(0, 0, 207, 0.6);
-    padding: 20px;
-    width: 100%;
-}
-
-header h1 {
-    font-size: 3rem;
-    margin: 10px;
-}
-
-nav {
-    margin-top: 10px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-section {
-    padding: 50px;
-}
-
-.resume-item, .project {
-    background: white;
-    padding: 15px;
-    margin: 15px auto;
-    max-width: 600px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-footer {
-    background: #333;
-    color: white;
-    padding: 10px;
-}
-
-
-</style>
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("Portfolio site loaded successfully!");
-
-    document.querySelectorAll("nav a").forEach(anchor => {
-        anchor.addEventListener("click", function(event) {
-            event.preventDefault();
-            const section = document.querySelector(this.getAttribute("href"));
-            section.scrollIntoView({ behavior: "smooth" });
-        });
-    });
-});
-
-
-</script>
-
 <body>
-
     <header>
         <div class="overlay">
             <h1>Nisha Patil</h1>
-            <p>MSITM Student | Data Analytics | Software Engineering</p>
+            <p>Web Developer | UI/UX Designer | Data Analyst</p>
             <nav>
                 <a href="#about">About</a>
-                <a href="#resume">Resume</a>
+                <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
@@ -106,48 +24,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I'm Nisha, an MSITM student passionate about Data Analytics and Software Development. I have experience in Python, SQL, Power BI, and frontend technologies.</p>
+        <p>With over 5 years of experience in web development, I specialize in frontend technologies and UI/UX design. Passionate about building seamless user experiences and leveraging data-driven insights.</p>
     </section>
 
-    <section id="resume">
-        <h2>Resume</h2>
-        <div class="resume-item">
-            <h3>Education</h3>
-            <p><strong>Master of Science in IT & Management</strong> - UNCG (2025 Expected)</p>
+    <section id="experience">
+        <h2>Work Experience</h2>
+        <div class="experience-item">
+            <h3>Graduate Student Ambassador - UNCG</h3>
+            <p>Jan 2025 - Present</p>
+            <p>Represented the MSITM program, conducted outreach, and supported prospective students.</p>
         </div>
-        <div class="resume-item">
-            <h3>Skills</h3>
-            <p>Python, SQL, Power BI, Django, Plotly, Data Visualization, Angular, Frontend Development</p>
-        </div>
-        <div class="resume-item">
-            <h3>Experience</h3>
-            <p><strong>Graduate Student Ambassador</strong> - Bryan School of Business and Economics</p>
+        <div class="experience-item">
+            <h3>Technical Lead - KPIT Technologies</h3>
+            <p>Nov 2022 - Feb 2023</p>
+            <p>Led development teams, improved product reliability, and managed project risks.</p>
         </div>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
-            <h3>CO2 Emission Prediction</h3>
-            <p>Built a predictive model to analyze future CO2 emission trends using Python and Machine Learning.</p>
+            <h3>Global CO2 Emission Prediction</h3>
+            <p>Built a machine learning model to predict future CO2 emission trends.</p>
         </div>
         <div class="project">
             <h3>Django Data Dashboard</h3>
-            <p>Developed an interactive dashboard using Django and Plotly for visualizing business analytics data.</p>
+            <p>Developed an interactive dashboard using Django and Plotly for business analytics.</p>
         </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <p>Angular, TypeScript, JavaScript, Python, Django, MySQL, PostgreSQL, Tableau, Power BI, Azure</p>
     </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:nisha@example.com">nisha@example.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/nishapatil" target="_blank">linkedin.com/in/nishapatil</a></p>
+        <p>Email: <a href="mailto:pniisha30@gmail.com">pniisha30@gmail.com</a></p>
+        <p>Phone: (919)-454-5849</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/nishapatil3" target="_blank">linkedin.com/in/nishapatil3</a></p>
         <p>GitHub: <a href="https://github.com/nisha-patil" target="_blank">github.com/nisha-patil</a></p>
     </section>
 
     <footer>
         <p>© 2024 Nisha Patil. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
-
