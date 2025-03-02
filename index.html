@@ -48,14 +48,32 @@
       font-size: 1.25rem;
       margin-top: 10px;
     }
-    /* Navbar */
-    .navbar {
-      padding: 1rem 2rem;
-    }
+   
     .navbar-nav .nav-link {
       font-weight: 500;
       margin: 0 10px;
     }
+    
+    .brand-img {
+    vertical-align: middle;
+    border-style: none;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    /* z-index: 2; */
+    box-shadow: 0 5px 1px rgba(128, 128, 128, 0.13);
+    width: 170px;
+    border-radius: 18%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -weblit-transform: translate(-50%, -50%);
+    /* border: 10px solid white; */
+    -webkit-transition: .5s !important;
+    transition: .5s !important;
+    -weblit-transition: .5s !important;
+    }
+    
     /* Section Headings */
     section h2 {
       margin-bottom: 40px;
@@ -116,17 +134,17 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-      <a class="navbar-brand font-weight-bold" href="#home" style="color:#f76f20">Nisha Patil</a>
+      <a class="navbar-brand font-weight-bold" href="#home" style="color:#de590b">Nisha Patil</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link font-weight-bold" href="#about" style="color:#f76f20">About</a></li>
-          <li class="nav-item"><a class="nav-link font-weight-bold" href="#resume" style="color:#f76f20">Resume</a></li>
-          <li class="nav-item"><a class="nav-link font-weight-bold" href="#skills" style="color:#f76f20">Skills</a></li>
-          <li class="nav-item"><a class="nav-link font-weight-bold" href="#contact" style="color:#f76f20">Contact</a></li>
+          <li class="nav-item"><a class="nav-link font-weight-bold" href="#about" style="color:#de590b">About</a></li>
+          <li class="nav-item"><a class="nav-link font-weight-bold" href="#resume" style="color:#de590b">Resume</a></li>
+          <li class="nav-item"><a class="nav-link font-weight-bold" href="#skills" style="color:#de590b">Skills</a></li>
+          <li class="nav-item"><a class="nav-link font-weight-bold" href="#contact" style="color:#de590b">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -145,9 +163,9 @@
   <!-- About Section -->
   <section id="about" class="py-5">
     <div class="container">
-      <h2 class="text-center font-weight-bold" style="color:#f76f20">About Me</h2>
+      <h2 class="text-center font-weight-bold" style="color:#de590b">About Me</h2>
       <ul class="navbar-nav brand">
-        <img src="images/Nisha_headshot.jpg" alt="" class="brand-img">
+                    <img src="images/Nisha_headshot.jpg" alt="" class="brand-img">
       </ul>
       <p class="lead text-center">
         I am a passionate Software Engineer with over 5 years of professional experience in web development, specializing in front-end technologies and UI/UX design. I excel in collaborating with cross-functional teams to build high-performance web applications, always focusing on creating exceptional user experiences.
@@ -158,7 +176,7 @@
   <!-- Resume Section -->
   <section id="resume" class="py-5 bg-light">
     <div class="container">
-    <h2 class="text-center font-weight-bold" style="color:#f76f20">Resume</h2>
+    <h2 class="text-center font-weight-bold" style="color:#de590b">Resume</h2>
     <h4 class="mb-4">My Work Experience</h4>
     <div class="row">
       <!-- Work Experience -->
@@ -244,7 +262,7 @@
   <!-- Skills Section -->
   <section id="skills" class="py-5">
     <div class="container">
-      <h2 class="text-center font-weight-bold" style="color:#f76f20">Technical Skills</h2>
+      <h2 class="text-center font-weight-bold" style="color:#de590b">Technical Skills</h2>
       <div class="row">
         <div class="col-md-6">
           <h5>Programming Languages</h5>
@@ -292,7 +310,7 @@
   <!----Awards----->
    <section id="awards" class="py-5 bg-light">
     <div class="container">
-    <h2 class="text-center font-weight-bold" style="color:#f76f20">Awards</h2>
+    <h2 class="text-center font-weight-bold" style="color:#de590b">Awards</h2>
       <div class="row">
       	<div class="col-md-6">
         <div class="card">
@@ -317,7 +335,7 @@
   <!-- Contact Section -->
   <section id="contact" class="py-5 bg-light">
     <div class="container">
-      <h2 class="text-center font-weight-bold" style="color:#f76f20">Contact Me</h2>
+      <h2 class="text-center font-weight-bold" style="color:#de590b">Contact Me</h2>
       <div class="row justify-content-center">
         <div class="col-md-8 text-center contact-info">
           <p><strong><i class="fas fa-envelope"></i> Email:</strong> <a href="mailto:pniisha30@gmail.com">pniisha30@gmail.com</a></p>
@@ -342,6 +360,8 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
 
 
 
