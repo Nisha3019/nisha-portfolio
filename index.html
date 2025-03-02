@@ -86,7 +86,25 @@
       border: none;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      width:350px;
+      height:600px;
+	  border-radius:20px;
+	  overflow: hidden;
+      border: 8px solid #fff;
+      position: relative;
+      font-family : 'roboto', sans-serif;
+      display: flex;
+      justify-content: center;
+      aligns-items: center;
     }
+  
+    .card-img{
+		width:100%;
+		height:100%;
+		object-fit: cover;
+		border-radius:15px;
+	}
+
     .card-header {
       background-color: #033695;
       color: #fff;
@@ -95,8 +113,65 @@
       padding: 15px;
     }
     .card-body {
-      padding: 20px;
+      padding: 10px;
+	  width:100%;
+      height:100%;
+      top:0;
+      right:-100%;
+      position: absolute;
+      backdrop-filter: blur(5px);
+      border-radius:15px;
+      color: #000;
+	  display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition:2s;
     }
+      
+	.card:hover .card-body{
+		right:0;
+	}
+    
+    .card-title{
+      text-transform: uppercase;
+      font-sioze:50px;
+      font-weight: 500;
+    }
+    
+    .card-text{
+      text-transform: capitalize;
+      font-size:14px;
+      font-weight: 300;
+     }
+     
+     .card-info{
+      font-size:16px;
+      line-height: 20px;
+      margin:40px 0;
+      font-weight: 400;
+    }
+
+    .card-btn{
+      color: white;
+      background: #1a0c05;
+      padding: 10px 20px;
+      width:120px;
+      border-radius: 5px;
+      text-transform: capitalize;
+      border: none;
+      outline :none;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+    
+    .card-btn:hover {
+    	background: #de5814;  
+    	color: white;      
+    	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	}
+    
+    
     /* Skills Progress Bars */
     .progress {
       height: 20px;
@@ -111,7 +186,7 @@
     }
     
     .bg-info{
-    	background: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%) !important;
+    	background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%) !important;
     }
     
     /* Contact Section */
@@ -182,7 +257,8 @@
       <!-- Work Experience -->
       <div class="col-md-4">
         <div class="card">
-          <div class="card-header">University of North Carolina Greensboro</div>
+          <div class="card-header">Bryan School of Business & Economics at UNC Greensboro</div>
+          <img src="images/BRYAN_IMG.jpg" alt="Trulli" width="500" height="333">
           <div class="card-body">
             <h5 class="card-title">Graduate Student Ambassador</h5>
             <p class="card-text"><small>Jan 2025 – Present</small></p>
@@ -192,14 +268,16 @@
             <h5 class="card-title mt-4">Graduate Assistant</h5>
             <p class="card-text"><small>Aug 2024 – Present</small></p>
             <ul>
-              <li>Provide administrative and research support to the recruitment team, managing 50+ weekly inquiries from students across time zones.</li>
+              <li class="card-info">Provide administrative and research support to the recruitment team, managing 50+ weekly inquiries from students across time zones.</li>
             </ul>
+            <button onclick="window.location.href='https://bryan.uncg.edu/programs/masters-programs/student-ambassadors/#msitm-ambassadors'" class="card-btn">Click Here</button>
           </div>
         </div>
     </div>
     <div class="col-md-4">
         <div class="card">
           <div class="card-header">KPIT Technologies Limited, Pune, India</div>
+          <img src="images/KPIT_IMG.avif" alt="Trulli" width="500" height="333">
           <div class="card-body">
             <h5 class="card-title">Technical Lead</h5>
             <p class="card-text"><small>Nov 2022 – Feb 2023</small></p>
@@ -211,12 +289,14 @@
             <ul>
               <li>Developed telemetry gateway web application for seamless integration and tailored technical solutions to meet client needs</li>
             </ul>
+            <button onclick="window.location.href='https://www.kpit.com'" class="card-btn">Click Here</button>
           </div>
         </div>
     </div>
     <div class="col-md-4">
         <div class="card">
           <div class="card-header">YAN IT Solutions Pvt Ltd, Pune, India</div>
+          <img src="images/YAN_IMG.png" alt="Trulli" width="500" height="333">
           <div class="card-body">
             <h5 class="card-title">Software Engineer</h5>
             <p class="card-text"><small>May 2019 – April 2020</small></p>
@@ -228,6 +308,7 @@
             <ul>
               <li>Built responsive web applications and optimized SQL queries for scalable performance, modernizing legacy code for better maintainability.</li>
             </ul>
+             <button onclick="window.location.href='https://www.yanitsolutions.com'" class="card-btn">Click Here</button>
           </div>
         </div>
       </div>
@@ -240,7 +321,7 @@
         <div class="card">
           <div class="card-header">University of North Carolina at Greensboro, NC, USA</div>
           <div class="card-body">
-            <h5 class="card-title">MS in Information Technology &amp; Management (MSITM)</h5>
+            <h5 class="card-title">Master of Science in IT &amp; Management (MSITM)</h5>
             <p class="card-text"><small>May 2025 | GPA: 3.9</small></p>
             <p>Relevant Coursework: Principles of Predictive Analytics, Organizing Data for Analytics, App Design and Programming, Visualizing Data to Design Strategy</p>
           </div>
@@ -341,7 +422,7 @@
           <p><strong><i class="fas fa-envelope"></i> Email:</strong> <a href="mailto:pniisha30@gmail.com">pniisha30@gmail.com</a></p>
           <p><strong><i class='fas fa-phone'></i> Phone:</strong> +1 919-454-5849</p>
           <p><strong><i class='fab fa-linkedin-in'></i> LinkedIn:</strong> <a href="https://www.linkedin.com/in/nishapatil3" target="_blank">linkedin.com/in/nishapatil3</a></p>
-          <p><strong><i class='fab fa-github'></i> GitHub:</strong> <a href="https://github.com/nisha-patil" target="_blank">https://github.com/Nisha3019</a></p>
+          <p><strong><i class='fab fa-github'></i> GitHub:</strong> <a href="https://github.com/nisha-patil" target="_blank">github.com/nisha-patil</a></p>
         </div>
       </div>
     </div>
@@ -360,6 +441,7 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
+
 
 
 
