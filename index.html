@@ -179,6 +179,55 @@
     .mb-3, .my-3{
 	font-style: italic;   
     }
+
+	  .timeline {
+    position: relative;
+    padding: 20px 0;
+  }
+
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .timeline-dot {
+    width: 15px;
+    height: 15px;
+    background-color: #de590b;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-content {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .timeline-content h4 {
+    color: #de590b;
+    margin-bottom: 5px;
+  }
+
+  .btn-primary {
+    background-color: #de590b;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #b54809;
+  }
 	  
     /* Skills Progress Bars */
     .progress {
