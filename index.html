@@ -91,7 +91,7 @@
       height:600px;
 	  border-radius:20px;
 	  overflow: hidden;
-      border: 8px solid #fff;
+      border: 5px solid #fff;
       position: relative;
       font-family : 'roboto', sans-serif;
       display: flex;
@@ -107,7 +107,7 @@
 	}
 
     .card-header {
-      background-color: #033695;
+      background-color: #120447;
       color: #fff;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
@@ -156,7 +156,7 @@
       color: white;
       background: #1a0c05;
       padding: 10px 20px;
-      width:120px;
+      width:135px;
       border-radius: 5px;
       text-transform: capitalize;
       border: none;
@@ -170,9 +170,16 @@
     	background: #de5814;  
     	color: white;      
     	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-	}
+    }
     
-    
+    .mb-4, .my-4 {
+	font-style: italic;
+    }
+
+    mb-3, .my-3{
+	font-style: italic;   
+    }
+	  
     /* Skills Progress Bars */
     .progress {
       height: 20px;
@@ -220,6 +227,7 @@
           <li class="nav-item"><a class="nav-link font-weight-bold" href="#about" style="color:#de590b">About</a></li>
           <li class="nav-item"><a class="nav-link font-weight-bold" href="#resume" style="color:#de590b">Resume</a></li>
           <li class="nav-item"><a class="nav-link font-weight-bold" href="#skills" style="color:#de590b">Skills</a></li>
+	  <li class="nav-item"><a class="nav-link font-weight-bold" href="#projects" style="color:#de590b">Projects</a></li>
           <li class="nav-item"><a class="nav-link font-weight-bold" href="#awards" style="color:#de590b">Awards</a></li>
           <li class="nav-item"><a class="nav-link font-weight-bold" href="#contact" style="color:#de590b">Contact</a></li>
         </ul>
@@ -320,7 +328,7 @@
     <h4 class="mb-4">Education</h4>
     <div class="row">
       <div class="col-md-6">
-        <div class="card" style="width: 500px; height: 350px;">
+        <div class="card" style="width: 500px; height: 330px;">
           <div class="card-header">University of North Carolina at Greensboro, NC, USA</div>
 	  <img src="images/UNCG_IMG.jpg" alt="Trulli" width: 486px;>
           <div class="card-body">
@@ -332,7 +340,7 @@
         </div>
         </div>
         <div class="col-md-6">
-        <div class="card" style="width: 500px; height: 350px;">
+        <div class="card" style="width: 500px; height: 330px;">
           <div class="card-header">University of Pune, Maharashtra, India</div>
 	  <img src="images/Pune_University_IMG.jpg" alt="Trulli" width:486px;>
           <div class="card-body">
@@ -349,17 +357,18 @@
   <!-- Skills Section -->
   <section id="skills" class="py-5">
     <div class="container">
-      <h2 class="text-center font-weight-bold" style="color:#de590b">Technical Skills</h2>
+      <h2 class="text-center font-weight-bold" style="color:#de590b">Skills</h2>
+      <h4 class="mb-4">Technical Skills</h4>
       <div class="row">
         <div class="col-md-6">
-          <h5>Programming Languages</h5>
+          <h5 style="font-weight: 800;">Programming Languages</h5>
           <div class="mb-3">
             <span>Angular, TypeScript, Python</span>
             <div class="progress">
               <div class="progress-bar bg-info" style="width: 90%;">90%</div>
             </div>
           </div>
-          <h5>Front-End Technologies</h5>
+          <h5 style="font-weight: 800;">Front-End Technologies</h5>
           <div class="mb-3">
             <span>Angular Material, JavaScript, jQuery, AJAX, JSON, HTML5, CSS3, SCSS, Bootstrap</span>
             <div class="progress">
@@ -368,7 +377,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <h5>Back-End Technologies and Databases</h5>
+          <h5 style="font-weight: 800;">Back-End Technologies and Databases</h5>
           <div class="mb-3">
             <span>C#, .NETCF3.5, RESTful API, Django, SQL, PostgreSQL</span>
             <div class="progress">
@@ -376,14 +385,14 @@
             </div>
           </div>
           <div class="mb-3">
-           <h5>Data Visualization & Analytics</h5>
+           <h5 style="font-weight: 800;">Data Visualization & Analytics</h5>
             <span>Tableau, Power BI</span>
             <div class="progress">
               <div class="progress-bar bg-info" style="width: 80%;">80%</div>
             </div>
           </div>
           <div class="mb-3">
-           <h5>Development Tools & Cloud</h5>
+           <h5 style="font-weight: 800;">Development Tools & Cloud</h5>
             <span>Visual Studio, Visual Studio Code, Microsoft Azure Cloud, Jupyter Notebook</span>
             <div class="progress">
               <div class="progress-bar bg-info" style="width: 80%;">80%</div>
@@ -401,13 +410,13 @@
     <div class="row">
       <div class="col-md-6">
         <div class="award_section p-3 text-center bg-dark text-white rounded">
-          <h3><i class="fas fa-crown" style="font-size:48px; color:white;"></i> Client Champion Award</h3>
+          <h3><i class="fas fa-crown" style="font-size:40px; color:#f7a90c;"></i> Client Champion Award</h3>
           <p class="card-text">Awarded by KPIT Technologies Limited for flexibility and creativity shown to find ways to meet customer's need.</p>
         </div>
       </div>
       <div class="col-md-6">
         <div class="award_section p-3 text-center bg-dark text-white rounded">
-          <h3><i class="fas fa-crown" style="font-size:48px; color:white;"></i> Client Champion Award</h3>
+          <h3><i class="fas fa-crown" style="font-size:40px; color:#f7a90c;"></i> Client Champion Award</h3>
           <p class="card-text">Awarded by KPIT Technologies Limited for quick and easy solution to resolve "Less Secure App" issue.</p>
         </div>
       </div>
