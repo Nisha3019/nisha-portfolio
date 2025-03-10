@@ -1618,9 +1618,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
 
- /* portfolio and blog grid */
-
-  .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
 	
 
   /**
@@ -1723,6 +1720,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   /* clients */
 
   .clients-item { min-width: calc(25% - 38px); }
+
+	/**
+   * PORTFOLIO
+   */
+
+  .project-list { grid-template-columns: repeat(3, 1fr); }
 
   /**
    * BLOG
