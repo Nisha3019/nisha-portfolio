@@ -1792,7 +1792,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * SIDEBAR
    */
 
-	/*
+
   .sidebar {
     position: sticky;
     top: 60px;
@@ -1801,25 +1801,9 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-bottom: 0;
     padding-top: 60px;
     z-index: 1;
-  } */
+  } 
 
-  /*.sidebar-info { flex-direction: column; }*/
-
-.sidebar {
-    position: fixed;
-    left: -300px; /* Initially hidden */
-    top: 0;
-    height: 100%;
-    width: 300px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    transition: left 0.5s ease-in-out;
-    z-index: 1000;
-}
-
-.sidebar.show {
-    left: 0; /* Sidebar slides in */
-}
-	
+  .sidebar-info { flex-direction: column; }
 
   .avatar-box img { width: 150px; }
 
@@ -1876,7 +1860,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   -->
 
   <main>
-
+  	<div class="container">
+		<h3>Welcome to my Website!</h3>
+		<p>Nisha Patil</p>
+		<span>MS in Information Technology and Management</span>
+	     <img src="images/pic03.jpg">
+  	</div>	  
     <!--
       - #SIDEBAR
     -->
@@ -2705,17 +2694,6 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 // Run the function on page load
 document.addEventListener('DOMContentLoaded', setActiveLink);
-
-	  
-document.addEventListener("scroll", function () {
-        const sidebar = document.querySelector(".sidebar");
-        if (window.scrollY > 100) { // Adjust this value based on when you want the sidebar to appear
-            sidebar.classList.add("show");
-        } else {
-            sidebar.classList.remove("show");
-        }
-});
-
 
   </script>
 
