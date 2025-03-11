@@ -1358,23 +1358,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: calc(100% - 64px);
   }
 
-.sidebar {
-    position: fixed;
-    left: -300px; /* Initially hidden */
-    top: 0;
-    height: 100%;
-    width: 300px;
-    background-color: #fff;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    transition: left 0.5s ease-in-out;
-    z-index: 1000;
-}
-
-.sidebar.show {
-    left: 0; /* Sidebar slides in */
-}
-
-
   /**
    * #NAVBAR
    */
@@ -1809,6 +1792,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * SIDEBAR
    */
 
+	/*
   .sidebar {
     position: sticky;
     top: 60px;
@@ -1817,9 +1801,25 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-bottom: 0;
     padding-top: 60px;
     z-index: 1;
-  }
+  } */
 
-  .sidebar-info { flex-direction: column; }
+  /*.sidebar-info { flex-direction: column; }*/
+
+.sidebar {
+    position: fixed;
+    left: -300px; /* Initially hidden */
+    top: 0;
+    height: 100%;
+    width: 300px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.5s ease-in-out;
+    z-index: 1000;
+}
+
+.sidebar.show {
+    left: 0; /* Sidebar slides in */
+}
+	
 
   .avatar-box img { width: 150px; }
 
