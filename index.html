@@ -484,16 +484,9 @@ main {
 }
 
 .navbar-link:hover,
-.navbar-link:focus {
-  color: var(--light-gray-70);
-}
+.navbar-link:focus { color: var(--light-gray-70); }
 
-/* Active link style */
-.navbar-link.active {
-  color: var(--orange-yellow-crayola);
-  background-color: rgba(255, 165, 0, 0.2); /* Light orange background */
-  border-radius: 5px;
-}
+.navbar-link.active { color: var(--orange-yellow-crayola); }
 
 
 /*-----------------------------------*\
@@ -891,7 +884,7 @@ main {
 }
 
 /*-----------------------------------*\
-  #PORTFOLIO
+  #PROJECTS
 \*-----------------------------------*/
 
 .filter-list { display: none; }
@@ -1242,7 +1235,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-   * #PORTFOLIO, BLOG 
+   * #PROJECTS, BLOG 
    */
 
   .project-img,
@@ -1501,7 +1494,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-   * #PORTFOLIO, BLOG
+   * #PROJECTS, BLOG
    */
 
   .project-img, .blog-banner-box { border-radius: 16px; }
@@ -1592,7 +1585,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-   * PORTFOLIO
+   * PROJECTS
    */
 
   .article-title { padding-bottom: 20px; }
@@ -1618,7 +1611,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .filter-item button.active { color: var(--orange-yellow-crayola); }
 
-  /* portfolio and blog grid */
+  /* PROJECTS and blog grid */
 
   .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
 
@@ -1726,7 +1719,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   .clients-item { min-width: calc(25% - 38px); }
 
 	/**
-   * PORTFOLIO
+   * PROJECTS
    */
 
   .project-list { grid-template-columns: repeat(3, 1fr); }
@@ -1884,7 +1877,7 @@ textarea.form-input::-webkit-resizer { display: none; }
         <div class="info-content">
           <h1 class="name" title="Nisha Patil">Nisha Patil</h1>
 
-          <p class="title">Software Engineer | Front-End Developer</p>
+          <p class="title">Software Engineer</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -1991,25 +1984,31 @@ textarea.form-input::-webkit-resizer { display: none; }
         - #NAVBAR
       -->
 
-    <nav class="navbar">
-  <ul class="navbar-list">
-    <li class="navbar-item">
-      <a class="navbar-link font-weight-bold" href="#about" id="about-link">About</a>
-    </li>
-    <li class="navbar-item">
-      <a class="navbar-link font-weight-bold" href="#resume" id="resume-link">Resume</a>
-    </li>
-    <li class="navbar-item">
-      <a class="navbar-link font-weight-bold" href="#portfolio" id="portfolio-link">Portfolio</a>
-    </li>
-    <li class="navbar-item">
-      <a class="navbar-link font-weight-bold" href="#awards" id="awards-link">Awards</a>
-    </li>
-    <li class="navbar-item">
-      <a class="navbar-link font-weight-bold" href="#contact" id="contact-link">Contact</a>
-    </li>
-  </ul>
-</nav>
+ <nav class="navbar">
+
+        <ul class="navbar-list">
+	<li class="navbar-item">
+    		<a class="navbar-link font-weight-bold" href="#about">About</a>
+	</li>
+
+	<li class="navbar-item">
+    		<a class="navbar-link font-weight-bold" href="#resume">Resume</a>
+	</li>
+
+	<li class="navbar-item">
+    		<a class="navbar-link font-weight-bold" href="#projects">Projects</a>
+	</li>
+
+	<li class="navbar-item">
+    		<a class="navbar-link font-weight-bold" href="#awards">Awards</a>
+	</li>
+		
+	<li class="navbar-item">
+    		<a class="navbar-link font-weight-bold" href="#contact">Contact</a>
+	</li>
+        </ul>
+
+      </nav>
 
 
       <!--
@@ -2333,12 +2332,12 @@ textarea.form-input::-webkit-resizer { display: none; }
         </section>
 
       <!--
-        - #PORTFOLIO
+        - #PROJECTS
       -->
 	    
-        <section class="projects" id="portfolio">
+        <section class="projects" id="projects">
 	<header>
-          	<h2 class="h2 article-title">Portfolio</h2>
+          	<h2 class="h2 article-title">Projects</h2>
         </header>
           <ul class="project-list">
             <li class="project-item active" data-filter-item="" data-category="Tableau">
@@ -2641,20 +2640,6 @@ for (let i = 0; i < navigationLinks.length; i++) {
       }
     }
 
-  });
-}
-
-// Function to set the active link based on the current URL
-function setActiveLink() {
-  const navLinks = document.querySelectorAll('.navbar-link');
-  const currentUrl = window.location.href;
-
-  navLinks.forEach(link => {
-    if (currentUrl.includes(link.getAttribute('href'))) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
   });
 }
 
