@@ -1358,6 +1358,21 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: calc(100% - 64px);
   }
 
+.sidebar {
+    position: fixed;
+    left: -300px; /* Initially hidden */
+    top: 0;
+    height: 100%;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.5s ease-in-out;
+    z-index: 1000;
+}
+
+.sidebar.show {
+    left: 0; /* Sidebar slides in */
+}
 
 
   /**
@@ -2536,8 +2551,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   <script>
   'use strict';
 
-
-
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
@@ -2692,6 +2705,17 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 // Run the function on page load
 document.addEventListener('DOMContentLoaded', setActiveLink);
+
+	  
+document.addEventListener("scroll", function () {
+        const sidebar = document.querySelector(".sidebar");
+        if (window.scrollY > 100) { // Adjust this value based on when you want the sidebar to appear
+            sidebar.classList.add("show");
+        } else {
+            sidebar.classList.remove("show");
+        }
+});
+
 
   </script>
 
