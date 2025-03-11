@@ -847,13 +847,20 @@ main {
 }
 
  /* Style for the plus icon */
+    summary {
+      list-style-type: none;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    /* Style for the plus icon */
     .plus-icon::before {
       content: "+"; 
       font-size: 16px;
       margin-right: 5px;
     }
 
-    /* Change to minus when the details element is opened */
+    /* Change to minus when the details element is open */
     details[open] .plus-icon::before {
       content: "-"; 
     }
@@ -861,11 +868,6 @@ main {
     /* Optional styling for details and summary */
     details {
       margin-bottom: 10px;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: bold;
     }
 
     .timeline-text {
@@ -876,20 +878,6 @@ main {
     details[open] .timeline-text {
       display: block;
     }
-
-    .timeline-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .timeline-item {
-      margin: 10px 0;
-    }
-
-    .timeline-item-title {
-      margin: 0;
-    }
-	  
 
 
 /**
@@ -2192,16 +2180,15 @@ textarea.form-input::-webkit-resizer { display: none; }
           <ol class="timeline-list">
           
           <li class="timeline-item">
-   	 <details>
-      	<summary>
-        	<span class="plus-icon"></span>
-        	<h4 class="h4 timeline-item-title">University of North Carolina Greensboro, NC, USA</h4>
-      	</summary>
-      	<span>Graduate Student Ambassador (Jan 2025 — Present)</span>
-     	 <p class="timeline-text">
-       	 Represented the MSITM program through outreach, recruitment, and engagement in events, webinars, and info sessions, supporting prospective students by sharing my experiences and answering their questions.
-      	</p>
-    	</details>
+   	<details>
+ 	 <summary>
+   		 <h4 class="h4 timeline-item-title plus-icon">University of North Carolina Greensboro, NC, USA </h4>
+  	</summary>
+ 		 <span>Graduate Student Ambassador (Jan 2025 — Present)</span>
+  	 <p class="timeline-text">
+    		Represented the MSITM program through outreach, recruitment, and engagement in events, webinars, and info sessions, supporting prospective students by sharing my experiences and answering their questions.
+ 	 </p>
+	</details>
   	</li>
             
             <li class="timeline-item">
