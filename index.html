@@ -484,12 +484,16 @@ main {
 }
 
 .navbar-link:hover,
-.navbar-link:focus { color: var(--light-gray-70); }
+.navbar-link:focus {
+  color: var(--light-gray-70);
+}
 
-.navbar-link.active { color: var(--orange-yellow-crayola); }
-
-
-
+/* Active link style */
+.navbar-link.active {
+  color: var(--orange-yellow-crayola);
+  background-color: rgba(255, 165, 0, 0.2); /* Light orange background */
+  border-radius: 5px;
+}
 
 
 /*-----------------------------------*\
@@ -1987,31 +1991,26 @@ textarea.form-input::-webkit-resizer { display: none; }
         - #NAVBAR
       -->
 
-      <nav class="navbar">
+    <nav class="navbar">
+  <ul class="navbar-list">
+    <li class="navbar-item">
+      <a class="navbar-link font-weight-bold" href="#about" id="about-link">About</a>
+    </li>
+    <li class="navbar-item">
+      <a class="navbar-link font-weight-bold" href="#resume" id="resume-link">Resume</a>
+    </li>
+    <li class="navbar-item">
+      <a class="navbar-link font-weight-bold" href="#portfolio" id="portfolio-link">Portfolio</a>
+    </li>
+    <li class="navbar-item">
+      <a class="navbar-link font-weight-bold" href="#awards" id="awards-link">Awards</a>
+    </li>
+    <li class="navbar-item">
+      <a class="navbar-link font-weight-bold" href="#contact" id="contact-link">Contact</a>
+    </li>
+  </ul>
+</nav>
 
-        <ul class="navbar-list">
-	<li class="navbar-item">
-    		<a class="navbar-link font-weight-bold" href="#about">About</a>
-	</li>
-
-	<li class="navbar-item">
-    		<a class="navbar-link font-weight-bold" href="#resume">Resume</a>
-	</li>
-
-	<li class="navbar-item">
-    		<a class="navbar-link font-weight-bold" href="#portfolio">Portfolio</a>
-	</li>
-
-	<li class="navbar-item">
-    		<a class="navbar-link font-weight-bold" href="#awards">Awards</a>
-	</li>
-		
-	<li class="navbar-item">
-    		<a class="navbar-link font-weight-bold" href="#contact">Contact</a>
-	</li>
-        </ul>
-
-      </nav>
 
       <!--
         - #ABOUT
@@ -2644,6 +2643,24 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// Function to set the active link based on the current URL
+function setActiveLink() {
+  const navLinks = document.querySelectorAll('.navbar-link');
+  const currentUrl = window.location.href;
+
+  navLinks.forEach(link => {
+    if (currentUrl.includes(link.getAttribute('href'))) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+}
+
+// Run the function on page load
+document.addEventListener('DOMContentLoaded', setActiveLink);
+
   </script>
 
 </body>
