@@ -452,6 +452,28 @@ main {
 /*Landing Page*\
 
 /* Landing Page Styling */
+
+.brand-img {
+    vertical-align: middle;
+    border-style: none;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    /* z-index: 2; */
+    box-shadow: 0 5px 1px rgba(128, 128, 128, 0.13);
+    width: 170px;
+    border-radius: 18%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -weblit-transform: translate(-50%, -50%);
+    /* border: 10px solid white; */
+    -webkit-transition: .5s !important;
+    transition: .5s !important;
+    -weblit-transition: .5s !important;
+    }
+    
+	  
 .landing-page {
     position: relative; 
     height: 100vh; 
@@ -1951,10 +1973,13 @@ textarea.form-input::-webkit-resizer { display: none; }
   		</video>
 
  	 	<div class="landing-content">
+		<div class="navbar-nav brand">
+                    <img src="images/Nisha_headshot.jpg" alt="" class="brand-img">
+      		</div>
    	 	<h1>Welcome to My Portfolio!</h1>
     		<h1>I'm Nisha Patil</h1>
 		<p>A Software Development Enthusiast</p>
-   		 <a href="#main-content" style="font-family: Garamond, serif; color: #f5f027 ; font-size:20px;"><strong>Explore My Work</strong></a>
+   		 <a href="#main-content" style="font-family: Garamond, serif; color: #f5f027 ; font-size:20px;"><strong>About Me</strong></a>
  	 	</div>
 	</div>
 	
