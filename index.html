@@ -1159,6 +1159,41 @@ figure.project-img {
 }
 
 
+/*-----------------------------------*\
+  #Awards
+\*-----------------------------------*/
+.modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .modal-content {
+        display: block;
+        margin: auto;
+        width: 80%;
+        max-width: 700px;
+        border-radius: 10px;
+    }
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+    }
+    #caption {
+        color: white;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
 
 
 
@@ -2520,39 +2555,63 @@ textarea.form-input::-webkit-resizer { display: none; }
       <!--
         - #Awards
       -->
-        <section class="blog-posts" id="awards">
-	<header>
-          <h2 class="h2 article-title">Awards</h2>
-        </header>
 
-          <ul class="blog-posts-list">
+ <section class="blog-posts" id="awards">
+    <header>
+        <h2 class="h2 article-title">Awards</h2>
+    </header>
 
-            <li class="blog-post-item">
-              <a href="#">
+    <ul class="blog-posts-list">
+
+        <li class="blog-post-item">
+            <a href="#">
                 <div class="blog-content">
-                  <h4 class="h4 blog-item-title"><i class="fas fa-crown" style="font-size:25px;color: var(--orange-yellow-crayola);"></i>Client Champion Award For Creativity</h4>
-                  <p class="blog-text">
-                   Awarded by KPIT Technologies Limited for flexibility and creativity shown to find ways to meet customer's need.
-                  </p>
-			<img src="images/certificate_kpit.jpg" alt="Nisha Patil" width="500" height="450" style="border-radius:10px; margin-top:8px; cursor: default;">
+                    <h4 class="h4 blog-item-title">
+                        <i class="fas fa-crown" style="font-size:25px;color: var(--orange-yellow-crayola);"></i>
+                        Client Champion Award For Creativity
+                    </h4>
+                    <p class="blog-text">
+                        Awarded by KPIT Technologies Limited for flexibility and creativity shown to find ways to meet customer's need.
+                    </p>
+                    <img class="expandable-img" src="images/certificate_kpit.jpg" 
+                         alt="Nisha Patil - Client Champion Award For Creativity" 
+                         width="500" height="450" 
+                         style="border-radius:10px; margin-top:8px; cursor:pointer;">
                 </div>
-              </a>
-            </li>
+            </a>
+        </li>
 
-            <li class="blog-post-item">
-              <a href="#">
+        <li class="blog-post-item">
+            <a href="#">
                 <div class="blog-content">
-                  <h4 class="h4 blog-item-title"><i class="fas fa-crown" style="font-size:25px;color: var(--orange-yellow-crayola);"></i>Client Champion Award For Innovation</h4>
-                  <p class="blog-text">
-                 Awarded by KPIT Technologies Limited for quick and easy solution to resolve "Less Secure App" issue.
-                  </p>
-			<img src="images/certificate_1_kpit.jpg" alt="Nisha Patil" width="500" height="450" style="border-radius:10px; margin-top:8px; cursor: default;">
+                    <h4 class="h4 blog-item-title">
+                        <i class="fas fa-crown" style="font-size:25px;color: var(--orange-yellow-crayola);"></i>
+                        Client Champion Award For Innovation
+                    </h4>
+                    <p class="blog-text">
+                        Awarded by KPIT Technologies Limited for quick and easy solution to resolve "Less Secure App" issue.
+                    </p>
+                    <img class="expandable-img" src="images/certificate_1_kpit.jpg" 
+                         alt="Nisha Patil - Client Champion Award For Innovation" 
+                         width="500" height="450" 
+                         style="border-radius:10px; margin-top:8px; cursor:pointer;">
                 </div>
-              </a>
-            </li>
-          </ul>
-        </section>
-      </article>
+            </a>
+        </li>
+
+    </ul>
+</section>
+
+<!-- Modal -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="fullImage">
+    <div id="caption"></div>
+</div>
+
+
+
+	    
 
       <!--
         - #CONTACT
@@ -2770,6 +2829,28 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 // Run the function on page load
 document.addEventListener('DOMContentLoaded', setActiveLink);
+
+// Awards images
+    var modal = document.getElementById("imageModal");
+    var modalImg = document.getElementById("fullImage");
+    var captionText = document.getElementById("caption");
+    var closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll(".expandable-img").forEach(img => {
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    });
+
+    closeBtn.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    modal.onclick = function () {
+        modal.style.display = "none";
+    }
 
   </script>
 
