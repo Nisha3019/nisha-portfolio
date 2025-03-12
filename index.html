@@ -1162,7 +1162,7 @@ figure.project-img {
 /*-----------------------------------*\
   #Awards
 \*-----------------------------------*/
-.modal {
+ .modal {
         display: none;
         position: fixed;
         z-index: 1;
@@ -1171,12 +1171,13 @@ figure.project-img {
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .modal-content {
-        display: block;
-        margin: auto;
-        width: 80%;
-        max-width: 700px;
+        max-width: 80%;
+        max-height: 80%;
         border-radius: 10px;
     }
     .close {
@@ -1193,8 +1194,6 @@ figure.project-img {
         margin-top: 10px;
         font-size: 18px;
     }
-
-
 
 
 /*-----------------------------------*\
@@ -2556,7 +2555,7 @@ textarea.form-input::-webkit-resizer { display: none; }
         - #Awards
       -->
 
- <section class="blog-posts" id="awards">
+<section class="blog-posts" id="awards">
     <header>
         <h2 class="h2 article-title">Awards</h2>
     </header>
@@ -2564,39 +2563,35 @@ textarea.form-input::-webkit-resizer { display: none; }
     <ul class="blog-posts-list">
 
         <li class="blog-post-item">
-            <a href="#">
-                <div class="blog-content">
-                    <h4 class="h4 blog-item-title">
-                        <i class="fas fa-crown" style="font-size:25px;color: var(--orange-yellow-crayola);"></i>
-                        Client Champion Award For Creativity
-                    </h4>
-                    <p class="blog-text">
-                        Awarded by KPIT Technologies Limited for flexibility and creativity shown to find ways to meet customer's need.
-                    </p>
-                    <img class="expandable-img" src="images/certificate_kpit.jpg" 
-                         alt="Nisha Patil - Client Champion Award For Creativity" 
-                         width="500" height="450" 
-                         style="border-radius:10px; margin-top:8px; cursor:pointer;">
-                </div>
-            </a>
+            <div class="blog-content">
+                <h4 class="h4 blog-item-title">
+                    <i class="fas fa-crown" style="font-size:25px;color: var(--orange-yellow-crayola);"></i>
+                    Client Champion Award For Creativity
+                </h4>
+                <p class="blog-text">
+                    Awarded by KPIT Technologies Limited for flexibility and creativity shown to find ways to meet customer's need.
+                </p>
+                <img class="expandable-img" src="images/certificate_kpit.jpg" 
+                     alt="Client Champion Award For Creativity" 
+                     width="500" height="450" 
+                     style="border-radius:10px; margin-top:8px; cursor:pointer;">
+            </div>
         </li>
 
         <li class="blog-post-item">
-            <a href="#">
-                <div class="blog-content">
-                    <h4 class="h4 blog-item-title">
-                        <i class="fas fa-crown" style="font-size:25px;color: var(--orange-yellow-crayola);"></i>
-                        Client Champion Award For Innovation
-                    </h4>
-                    <p class="blog-text">
-                        Awarded by KPIT Technologies Limited for quick and easy solution to resolve "Less Secure App" issue.
-                    </p>
-                    <img class="expandable-img" src="images/certificate_1_kpit.jpg" 
-                         alt="Nisha Patil - Client Champion Award For Innovation" 
-                         width="500" height="450" 
-                         style="border-radius:10px; margin-top:8px; cursor:pointer;">
-                </div>
-            </a>
+            <div class="blog-content">
+                <h4 class="h4 blog-item-title">
+                    <i class="fas fa-crown" style="font-size:25px;color: var(--orange-yellow-crayola);"></i>
+                    Client Champion Award For Innovation
+                </h4>
+                <p class="blog-text">
+                    Awarded by KPIT Technologies Limited for quick and easy solution to resolve "Less Secure App" issue.
+                </p>
+                <img class="expandable-img" src="images/certificate_1_kpit.jpg" 
+                     alt="Client Champion Award For Innovation" 
+                     width="500" height="450" 
+                     style="border-radius:10px; margin-top:8px; cursor:pointer;">
+            </div>
         </li>
 
     </ul>
@@ -2826,32 +2821,34 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 // Run the function on page load
 document.addEventListener('DOMContentLoaded', setActiveLink);
-	  
-  </script>
 	
 // Awards images
-<script>
-    var modal = document.getElementById("imageModal");
-    var modalImg = document.getElementById("fullImage");
-    var captionText = document.getElementById("caption");
-    var closeBtn = document.querySelector(".close");
+document.addEventListener("DOMContentLoaded", function () {
+        let modal = document.getElementById("imageModal");
+        let modalImg = document.getElementById("fullImage");
+        let captionText = document.getElementById("caption");
+        let closeBtn = document.querySelector(".close");
 
-    document.querySelectorAll(".expandable-img").forEach(img => {
-        img.onclick = function () {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
+        document.querySelectorAll(".expandable-img").forEach(img => {
+            img.addEventListener("click", function () {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            });
+        });
+
+        closeBtn.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
+
+        modal.addEventListener("click", function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
     });
-
-    closeBtn.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    modal.onclick = function () {
-        modal.style.display = "none";
-    }
-</script>
+	
+  </script>
 
 </body>
 
