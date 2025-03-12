@@ -2830,30 +2830,31 @@ document.addEventListener('DOMContentLoaded', setActiveLink);
 	
 // Awards images
 document.addEventListener("DOMContentLoaded", function () {
-        let modal = document.getElementById("imageModal");
-        let modalImg = document.getElementById("fullImage");
-        let captionText = document.getElementById("caption");
-        let closeBtn = document.querySelector(".close");
+    let modal = document.getElementById("imageModal");
+    let modalImg = document.getElementById("fullImage");
+    let captionText = document.getElementById("caption");
+    let closeBtn = document.querySelector(".close");
 
-        document.querySelectorAll(".expandable-img").forEach(img => {
-            img.addEventListener("click", function () {
-                modal.style.display = "flex";
-                modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
-            });
-        });
-
-        closeBtn.addEventListener("click", function () {
-            modal.style.display = "none";
-        });
-
-        modal.addEventListener("click", function (event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
+    document.querySelectorAll(".expandable-img").forEach(img => {
+        img.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent any default behavior
+            modal.classList.add("show"); // Show modal
+            modalImg.src = this.src; // Set modal image src
+            modalImg.style.display = "block"; // Ensure image is visible
+            captionText.innerHTML = this.alt;
         });
     });
-	
+
+    closeBtn.addEventListener("click", function () {
+        modal.classList.remove("show"); // Hide modal
+    });
+
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.classList.remove("show"); // Hide when clicking outside the image
+        }
+    });
+});
   </script>
 
 </body>
